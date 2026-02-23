@@ -180,11 +180,11 @@
   --base-size-xl: 20px;
   --base-size-2xl: 24px;
   --base-size-3xl: 32px;
-  --base-size-4xl: 36px;
   --base-size-5xl: 40px;
-  --base-size-6xl: 44px;
   --base-size-7xl: 48px;
   --base-size-8xl: 64px;
+  --base-size-4xl: 36px;
+  --base-size-6xl: 44px;
   --base-radius-zero: 0px;
   --base-radius-xs: 2px;
   --base-radius-sm: 4px;
@@ -222,11 +222,11 @@
   --size-xl: 20px;
   --size-2xl: 24px;
   --size-3xl: 32px;
-  --size-4xl: 36px;
   --size-5xl: 40px;
-  --size-6xl: 44px;
   --size-7xl: 48px;
   --size-8xl: 64px;
+  --size-4xl: 36px;
+  --size-6xl: 44px;
 
   /* ===== Foundation: Border Radius ===== */
   --radius-zero: 0px;
@@ -278,6 +278,8 @@
   --fill-purple-faint: #fafaff;
   --fill-pink: #ee46bc;
   --fill-transparent: #ffffff00;
+  --fill-green-dark: #229b67;
+  --fill-green-lighter: #e0f5ec;
 
   /* ===== Semantic: Stroke Colors (borders) ===== */
   --stroke-white: #ffffff;
@@ -306,6 +308,7 @@
   --stroke-purple-light: #d2ccff;
   --stroke-purple-lighter: #f4f3ff;
   --stroke-transparent: #ffffff00;
+  --stroke-green-dark: #229b67;
 
   /* ===== Semantic: Text Colors ===== */
   --text-default: #101828;
@@ -369,4 +372,27 @@
   --button-padding-y-sm: 6px;
   --button-padding-y-md: 6px;
   --button-padding-y-lg: 8px;
+  --alert-info-fill: #edf4fe;
+  --alert-info-icon: #1369e9;
+  --alert-success-fill: #ecfaf4;
+  --alert-success-icon: #28b97b;
+  --alert-warning-fill: #fff4ec;
+  --alert-warning-icon: #ff6200;
+  --alert-danger-fill: #ffeeee;
+  --alert-danger-icon: #ea1c1c;
+  --alert-radius-sm: 6px;
+  --alert-radius-md: 6px;
+  --alert-radius-lg: 8px;
+  --alert-font-size-sm: 12px;
+  --alert-font-size-md: 14px;
+  --alert-font-size-lg: 16px;
+  --alert-line-height-sm: 16px;
+  --alert-line-height-md: 20px;
+  --alert-line-height-lg: 24px;
+  --alert-padding-x-sm: 12px;
+  --alert-padding-x-md: 12px;
+  --alert-padding-x-lg: 16px;
+  --alert-padding-y-sm: 8px;
+  --alert-padding-y-md: 8px;
+  --alert-padding-y-lg: 8px;
 }

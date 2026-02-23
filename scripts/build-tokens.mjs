@@ -164,20 +164,26 @@ async function buildTokens() {
         tokensCSS += `  --text-${name}: ${resolved};\n`;
     }
 
-    // 4. Component Tokens (Specifically buttons)
+    // 4. Component Tokens (All components)
     const componentValue = firstNonEmpty(
         tokens['Components/Mode 1'],
         tokens['Component/Value'],
         tokens['Components/Value'],
         tokens['Component/Mode 1'],
     );
-    const buttonTokens = componentValue['button'] || {};
-    const flatButtons = flattenTokens(buttonTokens);
+    const flatComponents = {};
+    for (const [componentName, componentTokens] of Object.entries(componentValue)) {
+        if (!componentTokens || typeof componentTokens !== 'object') continue;
+        const flat = flattenTokens(componentTokens, componentName);
+        for (const [name, value] of Object.entries(flat)) {
+            flatComponents[name] = value;
+        }
+    }
 
     tokensCSS += '\n  /* ===== Component Tokens ===== */\n';
     let componentTokenCount = 0;
-    for (const [name, aliasValue] of Object.entries(flatButtons)) {
-        const varName = `--button-${name}`;
+    for (const [name, aliasValue] of Object.entries(flatComponents)) {
+        const varName = `--${name}`;
         const resolved = resolveAlias(aliasValue, { ...foundationValue, ...semanticValue });
         tokensCSS += `  ${varName}: ${resolved};\n`;
         componentTokenCount++;
@@ -205,15 +211,18 @@ async function buildTokens() {
         utilityLines.push(`.text-${name} { color: var(--text-${name}); }`);
     }
 
-    for (const [name] of Object.entries(flatButtons)) {
+    for (const [name] of Object.entries(flatComponents)) {
         if (name.includes('fill')) {
-            utilityLines.push(`.bg-button-${name} { background-color: var(--button-${name}); }`);
+            utilityLines.push(`.bg-${name} { background-color: var(--${name}); }`);
         }
         if (name.includes('stroke')) {
-            utilityLines.push(`.border-button-${name} { border-color: var(--button-${name}); }`);
+            utilityLines.push(`.border-${name} { border-color: var(--${name}); }`);
         }
         if (name.includes('text')) {
-            utilityLines.push(`.text-button-${name} { color: var(--button-${name}); }`);
+            utilityLines.push(`.text-${name} { color: var(--${name}); }`);
+        }
+        if (name.includes('icon')) {
+            utilityLines.push(`.icon-${name} { color: var(--${name}); }`);
         }
     }
 
@@ -268,7 +277,7 @@ async function buildTokens() {
     console.log(`   - ${Object.keys(flatSpacing).length} foundation spacing tokens → p-*, m-*, gap-*`);
     console.log(`   - ${Object.keys(flatSizes).length} foundation size tokens`);
     console.log(`   - ${Object.keys(flatRadius).length} foundation radius tokens → rounded-*`);
-    console.log(`   - ${componentTokenCount} component tokens → bg-button-*, text-button-*, border-button-*`);
+    console.log(`   - ${componentTokenCount} component tokens → bg-*, text-*, border-*, icon-*`);
     console.log('\n   🎉 All files auto-generated! No manual CSS changes needed.');
 }
 
