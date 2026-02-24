@@ -156,6 +156,9 @@
 .bg-badge-secondary-purple-fill { background-color: var(--badge-secondary-purple-fill); }
 .border-badge-secondary-purple-stroke { border-color: var(--badge-secondary-purple-stroke); }
 .text-badge-secondary-purple-text { color: var(--badge-secondary-purple-text); }
+.bg-toggle-fill { background-color: var(--toggle-fill); }
+.text-toggle-text { color: var(--toggle-text); }
+.text-toggle-text-disabled { color: var(--toggle-text-disabled); }
 .p-zero { padding: var(--space-zero); }
 .px-zero { padding-left: var(--space-zero); padding-right: var(--space-zero); }
 .py-zero { padding-top: var(--space-zero); padding-bottom: var(--space-zero); }

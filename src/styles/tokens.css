@@ -148,6 +148,7 @@
   --base-font-size-2xl: 24px;
   --base-font-size-3xl: 32px;
   --base-font-size-4xl: 40px;
+  --base-font-size-2lg: 18px;
   --base-line-height-xs: 12px;
   --base-line-height-sm: 16px;
   --base-line-height-md: 20px;
@@ -155,6 +156,7 @@
   --base-line-height-2xl: 28px;
   --base-line-height-3xl: 40px;
   --base-line-height-4xl: 48px;
+  --base-line-height-2lg: 26px;
   --base-space-zero: 0px;
   --base-space-4xs: 1px;
   --base-space-3xs: 2px;
@@ -182,9 +184,10 @@
   --base-size-3xl: 32px;
   --base-size-5xl: 40px;
   --base-size-7xl: 48px;
-  --base-size-8xl: 64px;
+  --base-size-8xl: 56px;
   --base-size-4xl: 36px;
   --base-size-6xl: 44px;
+  --base-size-9xl: 64px;
   --base-radius-zero: 0px;
   --base-radius-xs: 2px;
   --base-radius-sm: 4px;
@@ -224,9 +227,10 @@
   --size-3xl: 32px;
   --size-5xl: 40px;
   --size-7xl: 48px;
-  --size-8xl: 64px;
+  --size-8xl: 56px;
   --size-4xl: 36px;
   --size-6xl: 44px;
+  --size-9xl: 64px;
 
   /* ===== Foundation: Border Radius ===== */
   --radius-zero: 0px;
@@ -441,4 +445,20 @@
   --badge-padding-x-md: 8px;
   --badge-padding-y-sm: 4px;
   --badge-padding-y-md: 4px;
+  --toggle-fill: #d0d5dd;
+  --toggle-active: #1369e9;
+  --toggle-disabled: #eaecf0;
+  --toggle-active-disabled: #acccfb;
+  --toggle-text: #101828;
+  --toggle-text-disabled: #667085;
+  --toggle-sm-width: 40px;
+  --toggle-sm-height: 24px;
+  --toggle-sm-font-size: 16px;
+  --toggle-sm-line-height: 24px;
+  --toggle-sm-gap: 12px;
+  --toggle-md-width: 56px;
+  --toggle-md-height: 32px;
+  --toggle-md-font-size: 18px;
+  --toggle-md-line-height: 26px;
+  --toggle-md-gap: 12px;
 }
